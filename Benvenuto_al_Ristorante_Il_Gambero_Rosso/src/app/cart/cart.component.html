@@ -1,1 +1,45 @@
-<p>cart works!</p>
+<h1 id="header">Your cart</h1>
+<hr />
+<div id="cartDiv">
+    <div class="card">
+        <h5 class="card-header">Cart - Items(s)</h5>
+        <div class="card mb-3" style="max-width: 540px" *ngFor="let item of items">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img
+                    src="{{ item.img }}"
+                    class="img-fluid rounded-start"
+                    alt="{{ item.name }}"
+                    />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <h5 class="card-title">{{ item.price | currency: "EUR" }}</h5>
+                    <p class="card-text"><b>Description: </b>{{ item.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br /><br /><br />
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <h1 id="orderForm">Order Form</h1>
+        <p>Please fill up info for the delivery</p>
+        <hr>
+        <div>
+            <label for="name">Name </label>
+            <br>
+            <input id="name" type="text" formControlName="name" />
+        </div>
+
+        <div>
+            <label for="address">Address </label>
+            <br>
+            <input id="address" type="text" formControlName="address" />
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Purchase</button>
+    </form>
+</div>
+<br>

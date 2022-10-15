@@ -1,1 +1,20 @@
-<p>details works!</p>
+<h1>Dish details</h1>
+<hr>
+<div id="details" class="row g-4" >
+  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div id="boxShadow" class="card">
+        <img src="{{ dish.img }}" class="card-img-top" alt="{{ dish.name }}" />
+        <div class="card-body">
+            <h5 class="card-title">{{ dish.name }}</h5>
+            <p id="p" class="card-text"><b>Description: </b>{{ dish.description }}</p>
+            <hr />
+            <h5 class="card-text"><b>Price: </b>{{ dish.price | currency:"EUR" }}</h5>
+            <hr />
+            <div id="btnDiv">
+                <button type="button" class="btn btn-success" (click)="addToCart()">Order</button>
+            </div>
+        </div>
+        </div>
+  </div>
+</div>
+<br><br>
