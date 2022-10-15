@@ -24,3 +24,8 @@ form{
     font-family: 'Dancing Script', cursive;
     font-size: 50px;
 }
+
+#nameAndPriceDiv{
+    display: flex;
+    justify-content: space-between;
+}

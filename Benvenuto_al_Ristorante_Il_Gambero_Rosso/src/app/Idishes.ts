@@ -4,4 +4,5 @@ export interface Idishes {
     description: string;
     price: number;
     availablity: boolean;
+    ingredients: string;
 };

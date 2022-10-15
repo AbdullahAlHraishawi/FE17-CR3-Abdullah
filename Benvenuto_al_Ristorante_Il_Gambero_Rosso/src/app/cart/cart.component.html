@@ -14,9 +14,11 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                    <h5 class="card-title">{{ item.name }}</h5>
-                    <h5 class="card-title">{{ item.price | currency: "EUR" }}</h5>
-                    <p class="card-text"><b>Description: </b>{{ item.description }}</p>
+                    <div id="nameAndPriceDiv">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <h5 class="card-title"><b>Price: </b>{{ item.price | currency: "EUR" }}</h5>
+                    </div>
+                    <p class="card-text"><b>Ingredients: </b>{{ item.ingredients }}</p>
                 </div>
             </div>
         </div>
@@ -28,13 +30,13 @@
         <p>Please fill up info for the delivery</p>
         <hr>
         <div>
-            <label for="name">Name </label>
+            <label for="name"><b> Name </b></label>
             <br>
             <input id="name" type="text" formControlName="name" />
         </div>
 
         <div>
-            <label for="address">Address </label>
+            <label for="address"><b> Address </b></label>
             <br>
             <input id="address" type="text" formControlName="address" />
         </div>
